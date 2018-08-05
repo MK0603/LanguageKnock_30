@@ -1,12 +1,14 @@
 #!/usr/bin/python
 # coding: UTF-8
 
-import MeCab
+import MeCab,os
+
+dirPath=os.path.dirname(os.path.abspath(__file__))
 
 mcb = MeCab.Tagger("")
 
-ifile = open('/home/nanoha/Documents/neko.txt')
-ofile = open('/home/nanoha/Documents/neko.txt.mecab','w')
+ifile = open(dirPath+'/neko.txt')
+ofile = open(dirPath+'/neko.txt.mecab','w')
 
 idata = ifile.read()
 ifile.close()

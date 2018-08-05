@@ -1,7 +1,10 @@
 #!/usr/bin/python
 # coding: UTF-8
+import os
 
-ifile = open('/home/nanoha/Documents/neko.txt.mecab')
+dirPath=os.path.dirname(os.path.abspath(__file__))
+
+ifile = open(dirPath+'/neko.txt.mecab')
 
 idata = ifile.readlines()
 ifile.close()
@@ -30,4 +33,4 @@ for word in idata:
             sentenseList=[]
             sentenseCounter+=1
 
-print(novelList)
+print(sentenseCounter)
